@@ -5,12 +5,15 @@ import { motion, useInView } from "framer-motion";
 import noise from "/noise.svg";
 import RotatingSpace from "./RotatingSpace";
 import { Box } from "lucide-react";
+import useMousePos from "../util/useMousePos";
 
 const Homepage = forwardRef(({ xval, xval2, xval3, scaleV }, ref) => {
   const delay1 = 2.1;
   const delay2 = 2.4;
   const [mHover, setmHover] = useState(false);
   // console.log(mHover);
+  const { x, y } = useMousePos();
+  // console.log(x, y);
   return (
     <div ref={ref}>
       <motion.div
@@ -20,6 +23,28 @@ const Homepage = forwardRef(({ xval, xval2, xval3, scaleV }, ref) => {
         }}
         className="sticky top-0 select-none overflow-hidden "
       >
+        <motion.div
+          className=" absolute h-11  border-[#ffffff] z-[501] aspect-square rounded-full border-2"
+          style={{
+            top: y - 4.5,
+            left: x - 4.5,
+            opacity: mHover ? 1 : 0,
+            mixBlendMode: "difference",
+            transition: " opacity 0.3s ease-in-out",
+          }}
+          transition={{
+            type: "tween",
+            ease: "backInOut",
+            opacity: {
+              duration: 0.5,
+              type: "spring",
+              stiffness: 1000,
+              damping: 100,
+            },
+          }}
+        >
+          {" "}
+        </motion.div>
         <img
           className=" w-[100vw] brightness-[40%] z-40 h-full absolute object-cover opacity-20 "
           src={noise}
@@ -173,7 +198,7 @@ const Homepage = forwardRef(({ xval, xval2, xval3, scaleV }, ref) => {
           </motion.div>
         </motion.div>
         <motion.div
-          className="   top-1/2 left-1/2 absolute [transform:translate(-50%,-70%)] flex flex-col justify-center z-[500] "
+          className="   top-1/2 left-1/2 absolute cursor-none [transform:translate(-50%,-70%)] flex flex-col justify-center z-[500] "
           onMouseEnter={() => setmHover(true)}
           onMouseLeave={() => setmHover(false)}
         >
