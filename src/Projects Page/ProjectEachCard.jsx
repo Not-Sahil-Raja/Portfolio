@@ -84,6 +84,7 @@ const ProjectEachCard = ({ scrollYProgress, cardOffset, ProjectData }) => {
         className=" rounded-md aspect-video w-[90%] object-cover object-center"
         ref={textref}
         loop
+        muted={true}
       />
       <motion.div
         className=" bg-[#0000003a] absolute  backdrop-blur-md cursor-pointer z-40 top-[50%] left-[50%] [transform:translate(-100%,-30%)]  rounded-full p-[1vh] "
@@ -106,6 +107,8 @@ const ProjectEachCard = ({ scrollYProgress, cardOffset, ProjectData }) => {
         className=" absolute top-[-5%] left-[50%] [transform:translate(-60%,-30%)] text-[7vh] font-FixelText font-medium overflow-hidden  "
         onMouseEnter={() => setlinkHover(true)}
         onMouseLeave={() => setlinkHover(false)}
+        to={ProjectData.link}
+        target="_blank"
       >
         <div
           className=" relative w-full  h-full"

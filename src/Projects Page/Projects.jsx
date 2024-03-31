@@ -80,35 +80,35 @@ const Projects = forwardRef(({ index, sm3, sm4, bgcolor, item }, ref) => {
   const ProjectData = [
     {
       projectName: "Cypher",
-      video:
-        "https://videos.pexels.com/video-files/5925291/5925291-hd_1920_1080_24fps.mp4",
+      video: "./CypherPromo.mp4",
+      link: "https://cypher-theta.vercel.app/",
       details:
         " Our payment fraud application\n employs machine learning algorithms\n to detect suspicious transactions,\n flagging potential fraudulent activity in real-time. ",
       color: "to-[#000000]",
     },
     {
       projectName: "Agrico",
-      video:
-        "https://videos.pexels.com/video-files/8888818/8888818-hd_2048_1080_25fps.mp4",
+      video: "./AgricoPromo.mp4",
       details:
         "Agrico is an innovative EdTech platform\n empowering individuals and communities\n to learn modern farming practices and cultivate sustainable agricultural success. ",
       color: "to-[#2d232e]",
+      link: "https://agrico.vercel.app/",
     },
     {
       projectName: "Cook's Book",
-      video:
-        "https://videos.pexels.com/video-files/8888818/8888818-hd_2048_1080_25fps.mp4",
+      video: "./Cook'sBookPromo.mp4",
       details:
         " Cook's Book could evolve into a\n meal planning tool,suggesting recipes for the entire weekthat utilize overlapping ingredients and minimize waste.",
       color: "to-[#02010a]",
+      link: "https://github.com/AvirupRay/CookBook",
     },
     {
       projectName: "RobinFood",
-      video:
-        "https://videos.pexels.com/video-files/8888818/8888818-hd_2048_1080_25fps.mp4",
+      video: "./RobinFoodPromo.mp4",
       details:
         "RobinFood is a web platform\n that bridges the gap between restaurants with\nsurplus food and non-governmental organization(NGOs),\nfood banks, dedicated to distributing food to those in need.",
       color: "to-[#2d2d34]",
+      link: "https://github.com/AvirupRay/reckon_5.0",
     },
   ];
 
@@ -183,7 +183,11 @@ const Projects = forwardRef(({ index, sm3, sm4, bgcolor, item }, ref) => {
                   transformOrigin: { duration: 0.0 },
                 }}
               ></motion.div>
-              <Link className=" flex items-center justify-start pl-[1vw] h-full  w-full">
+              <Link
+                className=" flex items-center justify-start pl-[1vw] h-full  w-full"
+                to={ProjectData[0].link}
+                target="_blank"
+              >
                 Cypher <ArrowUpRightIcon />
               </Link>
             </motion.div>
@@ -208,7 +212,11 @@ const Projects = forwardRef(({ index, sm3, sm4, bgcolor, item }, ref) => {
                   transformOrigin: { duration: 0.0 },
                 }}
               ></motion.div>
-              <Link className=" flex items-center justify-start pl-[1vw] h-full  w-full">
+              <Link
+                className=" flex items-center justify-start pl-[1vw] h-full  w-full"
+                to={ProjectData[1].link}
+                target="_blank"
+              >
                 Agrico <ArrowUpRightIcon />
               </Link>
             </motion.div>
@@ -233,7 +241,11 @@ const Projects = forwardRef(({ index, sm3, sm4, bgcolor, item }, ref) => {
                   transformOrigin: { duration: 0.0 },
                 }}
               ></motion.div>
-              <Link className=" flex items-center justify-start pl-[1vw] h-full  w-full">
+              <Link
+                className=" flex items-center justify-start pl-[1vw] h-full  w-full"
+                to={ProjectData[2].link}
+                target="_blank"
+              >
                 Cook's Book <ArrowUpRightIcon />
               </Link>
             </motion.div>
@@ -258,7 +270,11 @@ const Projects = forwardRef(({ index, sm3, sm4, bgcolor, item }, ref) => {
                   transformOrigin: { duration: 0.0 },
                 }}
               ></motion.div>
-              <Link className=" flex items-center justify-start pl-[1vw] h-full  w-full">
+              <Link
+                className=" flex items-center justify-start pl-[1vw] h-full  w-full"
+                to={ProjectData[3].link}
+                target="_blank"
+              >
                 RobinFood <ArrowUpRightIcon />
               </Link>
             </motion.div>
