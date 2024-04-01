@@ -7,6 +7,7 @@ import AboutMe from "./About me/AboutMe.jsx";
 import Layout from "./Layout.jsx";
 import SmoothScrolling from "./SmoothScrolling.jsx";
 import { Try } from "./Try.jsx";
+import { LazyMotion, domAnimation } from "framer-motion";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <SmoothScrolling>
-      <RouterProvider router={router} />
+      <LazyMotion features={domAnimation}>
+        <RouterProvider router={router} />
+      </LazyMotion>
     </SmoothScrolling>
   </React.StrictMode>
 );

@@ -58,7 +58,7 @@ const LandingPage = () => {
       setisLoading(false);
     }, 1600);
   }, []);
-
+  console.log("Rendered");
   return (
     <>
       <motion.div className={` relative  select-none  ${isLoading ? "" : ""}`}>
