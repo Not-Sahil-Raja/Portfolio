@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import vector1 from "/sign1.png";
 import vector2 from "/sign2.png";
 import vector3 from "/sign3.png";
+import { Link } from "react-router-dom";
 
 const AboutMe = forwardRef(({}, ref) => {
   const [hover1, sethover1] = useState(false);
@@ -228,7 +229,11 @@ const AboutMe = forwardRef(({}, ref) => {
                     Learning Web Dev & ML.
                   </motion.span>
                 </motion.div>
-                <div className="  flex items-center justify-center absolute lg:bottom-[10%] bottom-[2vh] right-0">
+                <Link
+                  className="  flex items-center justify-center absolute lg:bottom-[10%] bottom-[2vh] right-0"
+                  to="https://drive.google.com/file/d/1gIHebwsb9Bf1h_k8N3FHjM03bNIPaXIT/view?usp=sharing"
+                  target="_blank"
+                >
                   <motion.div
                     className=" text-[4vh] font-FixelText cursor-pointer relative overflow-hidden"
                     onMouseEnter={() => setresHover(true)}
@@ -261,7 +266,7 @@ const AboutMe = forwardRef(({}, ref) => {
                       }}
                     ></motion.div>
                   </motion.div>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
