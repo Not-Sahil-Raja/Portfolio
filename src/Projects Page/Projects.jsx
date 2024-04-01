@@ -280,7 +280,7 @@ const Projects = forwardRef(({ index, sm3, sm4, bgcolor, item }, ref) => {
             </motion.div>
           </div>
         </div>
-        <section>
+        {/* <section>
           {" "}
           <ProjectEachCard
             scrollYProgress={scrollYProgress}
@@ -308,7 +308,7 @@ const Projects = forwardRef(({ index, sm3, sm4, bgcolor, item }, ref) => {
             cardOffset={[0.289, 0.3255, 0.341, 0.411]}
             ProjectData={ProjectData[3]}
           />
-        </section>
+        </section> */}
       </div>
     </motion.section>
   );
