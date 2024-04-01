@@ -282,32 +282,32 @@ const Projects = forwardRef(({ index, sm3, sm4, bgcolor, item }, ref) => {
         </div>
         <section>
           {" "}
-          <ProjectEachCard
+          {/* <ProjectEachCard
             scrollYProgress={scrollYProgress}
             cardOffset={[0.058, 0.0945, 0.11, 0.18]}
             ProjectData={ProjectData[0]}
-          />
+          /> */}
         </section>
         <section>
-          <ProjectEachCard
+          {/* <ProjectEachCard
             scrollYProgress={scrollYProgress}
             cardOffset={[0.135, 0.1715, 0.187, 0.257]}
             ProjectData={ProjectData[1]}
-          />
+          /> */}
         </section>
         <section>
-          <ProjectEachCard
+          {/* <ProjectEachCard
             scrollYProgress={scrollYProgress}
             cardOffset={[0.212, 0.2485, 0.264, 0.334]}
             ProjectData={ProjectData[2]}
-          />
+          /> */}
         </section>
         <section>
-          <ProjectEachCard
+          {/* <ProjectEachCard
             scrollYProgress={scrollYProgress}
             cardOffset={[0.289, 0.3255, 0.341, 0.411]}
             ProjectData={ProjectData[3]}
-          />
+          /> */}
         </section>
       </div>
     </motion.section>
