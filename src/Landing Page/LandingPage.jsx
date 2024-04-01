@@ -20,16 +20,25 @@ import noise from "/noise.svg";
 
 const LandingPage = () => {
   const [isLoading, setisLoading] = useState(true);
+  const [mobileView, setMobileView] = useState(false);
+  const [techTranslateX, setTechTranslateX] = useState("-80%");
   const container = useRef(null);
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const projectRef = useRef(null);
   const techRef = useRef(null);
   const connectRef = useRef(null);
+
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start start", "end end"],
   });
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setMobileView(true);
+      setTechTranslateX("-140%");
+    }
+  }, []);
 
   const tchStcInV = useInView(techRef, { threshold: 0.5 });
 
@@ -37,7 +46,7 @@ const LandingPage = () => {
   const sm2 = useTransform(scrollYProgress, [0, 1], [0, -450]);
   const sm3 = useTransform(scrollYProgress, [0.01, 0.12], [1, 0.5]);
   const sm4 = useTransform(scrollYProgress, [0.01, 0.095], [5, 0]);
-  const sm5 = useTransform(scrollYProgress, [0.63, 1], ["5%", "-80%"]);
+  const sm5 = useTransform(scrollYProgress, [0.63, 1], ["5%", techTranslateX]);
 
   const progress = useTransform(scrollYProgress, [0, 1], [0, 3]);
   // useMotionValueEvent(scrollYProgress, "change", (latest) => {
@@ -52,11 +61,11 @@ const LandingPage = () => {
 
   return (
     <>
-      <motion.div className={` relative w-2   ${isLoading ? "" : ""}`}>
+      <motion.div className={` relative  select-none  ${isLoading ? "" : ""}`}>
         <Reveal />
         <NavLink to="/">
           <motion.div
-            className="fixed px-[1vw] overflow-hidden z-[1001] font-medium top-[2vh] left-[1vw] text-[3vh] text-[#fcfeff] font-ClashDisplay font-#8E9495 "
+            className="fixed px-[1vw] overflow-hidden z-[1001] font-medium  left-[1vw] lg:text-[3vh] text-[2.5vh]  text-[#fcfeff] font-ClashDisplay font-#8E9495 "
             whileHover={{ fontStyle: "italic" }}
             initial={{
               top: "50%",
@@ -140,7 +149,7 @@ const LandingPage = () => {
               <div className=" h-[15%]  flex items-end text-[8vh] pb-[vh] pl-[1vw] font-FixelText overflow-hidden">
                 {" "}
                 <motion.span
-                  className=" relative"
+                  className=" relative max-md:text-[5vh] max-md:pl-[5vw] max-md:pb-[2vh]  "
                   // initial={{ x: 30, opacity: 0.1 }}
                   animate={{
                     x: tchStcInV ? 0 : 50,

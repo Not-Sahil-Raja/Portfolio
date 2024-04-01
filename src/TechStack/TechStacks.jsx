@@ -29,13 +29,13 @@ const TechStacks = ({ sm5 }) => {
   return (
     <div className=" h-[80%] select-none bg-gradient-to-b from-[#161616] to-[#111010] relative overflow-hidden border-t">
       <div
-        className=" absolute h-full w-[35%] bg-gradient-to-r backdrop-blur-md from-[#00000000] to-[#02020269]  z-20 right-0"
+        className=" absolute h-full lg:w-[35%] w-[0%] bg-gradient-to-r backdrop-blur-md from-[#00000000] to-[#02020269]  z-20 right-0"
         style={{
           maskImage: "linear-gradient(to left, black 0%, transparent 100%)",
         }}
       ></div>
       <div
-        className=" absolute h-full w-[20%] bg-gradient-to-r backdrop-blur-md to-[#00000000] from-[#02020288]  z-20 left-0"
+        className=" absolute h-full  lg:w-[20%] w-[0%]  bg-gradient-to-r backdrop-blur-md to-[#00000000] from-[#02020288]  z-20 left-0"
         style={{
           maskImage: "linear-gradient(to right, black 0%, transparent 100%)",
         }}
@@ -56,14 +56,14 @@ const TechStacks = ({ sm5 }) => {
       >
         {AllTechStacks.map((item, index) => (
           <motion.div
-            className=" h-full w-[35vw] border-x border-b  px-[1.5vw] py-[2vh] flex flex-col font-FixelText"
+            className=" h-full lg:w-[35vw] w-[80vw] border-x border-b  px-[1.5vw] py-[2vh] flex flex-col font-FixelText"
             style={{
               background:
                 "radial-gradient(143.86% 143.86% at 50% 180.52%, #2E454A 0%, #161616 100%)",
             }}
             key={index}
           >
-            <div className=" pt-[3vh] h-[70%] flex flex-col text-[3.2vh]">
+            <div className=" pt-[3vh] h-[70%] flex flex-col lg:text-[3.2vh] text-[2vh]">
               {item.stacks.map((item, index) => (
                 <motion.div
                   className=" w-full py-[.5vh] border-b mb-[2vh] relative"
@@ -87,8 +87,10 @@ const TechStacks = ({ sm5 }) => {
               ))}
             </div>
             <div className="  h-[30%] flex flex-col justify-center font-Geist">
-              <span className="text-[3.6vh] pb-[1vh]">{item.name}</span>
-              <span className=" text-wrap text-[3vh] leading-none">
+              <span className="lg:text-[3.6vh] text-[2.5vh] pb-[1vh]">
+                {item.name}
+              </span>
+              <span className=" text-wrap lg:text-[3vh] text-[2vh] leading-none">
                 {item.details}{" "}
               </span>
             </div>

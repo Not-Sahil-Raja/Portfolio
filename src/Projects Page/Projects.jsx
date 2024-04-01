@@ -90,7 +90,7 @@ const Projects = forwardRef(({ index, sm3, sm4, bgcolor, item }, ref) => {
       projectName: "Agrico",
       video: "./AgricoPromo.mp4",
       details:
-        "Agrico is an innovative EdTech platform\n empowering individuals and communities\n to learn modern farming practices and cultivate sustainable agricultural success. ",
+        "Agrico is an innovative EdTech platform\n empowering individuals and communities\n to learn modern farming practices\n and cultivate sustainable agricultural success. ",
       color: "to-[#2d232e]",
       link: "https://agrico.vercel.app/",
     },
@@ -98,7 +98,7 @@ const Projects = forwardRef(({ index, sm3, sm4, bgcolor, item }, ref) => {
       projectName: "Cook's Book",
       video: "./Cook'sBookPromo.mp4",
       details:
-        " Cook's Book could evolve into a\n meal planning tool,suggesting recipes for the entire weekthat utilize overlapping ingredients and minimize waste.",
+        " Cook's Book could evolve into a\n meal planning tool,suggesting recipes for the entire week \nthat utilize overlapping ingredients and minimize waste.",
       color: "to-[#02010a]",
       link: "https://github.com/AvirupRay/CookBook",
     },
@@ -130,7 +130,7 @@ const Projects = forwardRef(({ index, sm3, sm4, bgcolor, item }, ref) => {
       </svg> */}
       <div className=" w-full  h-full relative overflow-hidden">
         <motion.div
-          className=" absolute top-0 left-1/2 [transform:translate(30%,10%)] text-[15vh] font-Geist"
+          className=" absolute top-0 left-1/2 [transform:translate(30%,10%)] lg:text-[15vh] text-[5vh] whitespace-nowrap font-Geist"
           style={{
             translateX: HeadingX,
             opacity: HeadingOpacity,
@@ -162,7 +162,7 @@ const Projects = forwardRef(({ index, sm3, sm4, bgcolor, item }, ref) => {
             </motion.div>
           </div>
         </div>
-        <div className=" w-[20vw] top-1/2 h-[30vh] [transform:translate(10%,-50%)] justify-evenly  absolute flex flex-col font-Geist text-[3vh]">
+        <div className="lg:w-[20vw] lg:top-1/2 lg:h-[30vh] lg:gap-0 gap-1 top-[20%]  lg:text-[3vh] text-[2.5vh] [transform:translate(10%,-50%)] justify-evenly  absolute flex flex-col font-Geist whitespace-nowrap">
           <div className=" w-full h-[20%] ">
             <motion.div
               className=" w-full h-full relative"

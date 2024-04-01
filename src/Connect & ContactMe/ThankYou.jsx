@@ -23,7 +23,7 @@ const ThankYou = () => {
     <div className="  w-full select-none h-[100vh] flex items-center font-Blackbird justify-center relative">
       <div className=" flex flex-col text-center">
         <motion.span
-          className=" text-[20vh] leading-none whitespace-nowrap"
+          className=" lg:text-[20vh] text-[5vh] leading-none whitespace-nowrap"
           initial={{
             opacity: 0,
             rotateX: "30deg",

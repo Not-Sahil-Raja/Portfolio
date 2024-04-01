@@ -113,7 +113,7 @@ const Homepage = forwardRef(({ xval, xval2, xval3, scaleV }, ref) => {
             </defs>
           </svg>
         </motion.div>
-        <div className=" absolute bottom-[10vh] w-[25%] left-[3%]">
+        <div className=" absolute lg:bottom-[10vh] bottom-[7vh]  lg:w-[25%] w-1/2 left-[3%]">
           <motion.div
             className=" flex items-start mt-[4vh] opacity-60 font-SpaceGrostesk justify-start px-[.3vw]"
             style={{
@@ -128,7 +128,7 @@ const Homepage = forwardRef(({ xval, xval2, xval3, scaleV }, ref) => {
             }}
           >
             <motion.span
-              className=" text-[1.5vw] leading-none font-FixelText text-[#ffffffbd] "
+              className=" lg:text-[1.5vw] text-[2vh]  leading-none font-FixelText text-[#ffffffbd] "
               initial={{
                 opacity: 0,
                 rotateX: 90,
@@ -155,7 +155,7 @@ const Homepage = forwardRef(({ xval, xval2, xval3, scaleV }, ref) => {
             </motion.span>
           </motion.div>
         </div>
-        <motion.div className=" absolute bottom-[2vh]  right-[2%] ">
+        <motion.div className=" absolute lg:bottom-[10vh]  bottom-[7vh]  lg:right-[2%] right-[5%] ">
           <motion.div
             className=" flex items-start opacity-60  justify-start "
             style={{
@@ -170,7 +170,7 @@ const Homepage = forwardRef(({ xval, xval2, xval3, scaleV }, ref) => {
             }}
           >
             <motion.span
-              className=" text-[1vw] leading-none font-Geist text-[#ffffffbd] flex items-center justify-center gap-1 "
+              className=" lg:text-[1vw] text-[1.85vh] leading-none font-Geist text-[#ffffffbd] flex items-center justify-center gap-1 "
               initial={{
                 opacity: 0,
                 rotateX: 90,
@@ -203,7 +203,7 @@ const Homepage = forwardRef(({ xval, xval2, xval3, scaleV }, ref) => {
           onMouseLeave={() => setmHover(false)}
         >
           <motion.div
-            className=" h-fit  font-SpaceGrotesk  text-[15vw] whitespace-nowrap  leading-none  flex flex-col items-center px-[.5vw] "
+            className=" h-fit  font-SpaceGrotesk  text-[15vw]  whitespace-nowrap  leading-none  flex flex-col items-center px-[.5vw] "
             style={{
               y: xval,
               transition: {
@@ -242,7 +242,7 @@ const Homepage = forwardRef(({ xval, xval2, xval3, scaleV }, ref) => {
                   opacity: { duration: 0.5 },
                   easings: [0.42, 0, 0.58, 1],
                 }}
-                className=" text-[10vw] font-ClashDisplay"
+                className=" lg:text-[10vw] text-[7.5vh] font-ClashDisplay"
               >
                 Sahil Raja.
               </motion.span>
@@ -276,7 +276,7 @@ const Homepage = forwardRef(({ xval, xval2, xval3, scaleV }, ref) => {
                   opacity: { duration: 0.5 },
                   easings: [0.42, 0, 0.58, 1],
                 }}
-                className=" font-Geist whitespace-nowrap text-[3vw] opacity-75 leading-none"
+                className=" font-Geist whitespace-nowrap lg:text-[3vw] text-[2.5vh] opacity-75 leading-none"
               >
                 Full Stack Developer
               </motion.span>

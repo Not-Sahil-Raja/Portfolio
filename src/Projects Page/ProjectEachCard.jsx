@@ -53,7 +53,7 @@ const ProjectEachCard = ({ scrollYProgress, cardOffset, ProjectData }) => {
   }, [textInV]);
   return (
     <motion.div
-      className="  rounded-md  absolute select-none top-1/2 left-1/2 [transform:translate(50%,-50%)]"
+      className="  rounded-md  absolute max-md:w-[90%] select-none top-1/2 left-1/2 [transform:translate(50%,-50%)]"
       style={{
         transform: `translate(${xMove}, ${yMove}) rotate(${rotate}) `,
         x: xMove,
@@ -81,7 +81,7 @@ const ProjectEachCard = ({ scrollYProgress, cardOffset, ProjectData }) => {
       ></div>
       <video
         src={ProjectData.video}
-        className=" rounded-md aspect-video w-[90%] object-cover object-center"
+        className=" rounded-md aspect-video lg:w-[90%]   object-cover object-center"
         ref={textref}
         loop
         muted={true}
@@ -104,7 +104,7 @@ const ProjectEachCard = ({ scrollYProgress, cardOffset, ProjectData }) => {
       </motion.div>
 
       <Link
-        className=" absolute top-[-5%] left-[50%] [transform:translate(-60%,-30%)] text-[7vh] font-FixelText font-medium overflow-hidden  "
+        className=" absolute top-[-5%] left-[50%] lg:[transform:translate(-60%,-30%)] lg:text-[7vh] [transform:translate(-50%,-30%)] text-[4.5vh] font-FixelText font-medium overflow-hidden  "
         onMouseEnter={() => setlinkHover(true)}
         onMouseLeave={() => setlinkHover(false)}
         to={ProjectData.link}
@@ -118,19 +118,7 @@ const ProjectEachCard = ({ scrollYProgress, cardOffset, ProjectData }) => {
           }}
         >
           <motion.div
-            className="  w-full h-full absolute bg-[#000000] origin-left"
-            animate={{
-              transform: linkHover ? "scaleX(1)" : "scaleX(0)",
-              borderRadius: linkHover ? "0px" : "0% 60% 60% 0%",
-            }}
-            transition={{
-              type: "tween",
-              duration: 0.5,
-              ease: [0.22, 0.7, 0, 1],
-            }}
-          ></motion.div>
-          <motion.div
-            className=" z-20 relative px-[1vw] flex gap-[.3vh] items-center justify-center "
+            className=" z-20 relative px-[1vw] flex gap-[.3vh] items-center justify-center  whitespace-nowrap"
             animate={{
               rotateX: textInV ? "0deg" : "90deg",
               y: textInV ? "0%" : "50%",
@@ -161,13 +149,18 @@ const ProjectEachCard = ({ scrollYProgress, cardOffset, ProjectData }) => {
           </motion.div>
         </div>
       </Link>
-      <div className=" absolute top-[50%] left-[0%] [transform:translate(50%,-0%)] px-[.5vw]  h-[100%] w-[50%]  text-[2.1vh]  font-FixelText leading-none flex flex-col whitespace-nowrap text-wrap items-center justify-center ">
+      <div className=" absolute lg:bottom-[-10%] left-[50%] [transform:translate(-50%,-0%)]  lg:text-[2vh] text-[1.5vh]  font-FixelText leading-none flex flex-col gap-1 whitespace-nowrap items-center justify-center">
         {
           lines.map((line, index) => (
-            <div key={index} className="w-full relative overflow-hidden">
-              <span className=" opacity-[0]">{line}</span>
+            <div
+              key={index}
+              className="w-full relative overflow-hidden text-center"
+            >
+              <span className=" opacity-[0] whitespace-nowrap px-1 py-2">
+                {line}
+              </span>
               <motion.div
-                className=" absolute whitespace-nowrap flex flex-col top-[0%]  text-wrap items-center justify-center "
+                className=" absolute whitespace-nowrap flex flex-col top-[0%] w-full   items-center justify-center text-center "
                 animate={{
                   y: textInV ? "0%" : "120%",
                   x: textInV ? "0%" : "-3%",

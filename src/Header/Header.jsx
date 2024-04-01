@@ -6,6 +6,7 @@ import {
   useInView,
   useMotionValueEvent,
 } from "framer-motion";
+import { MenuIcon, X } from "lucide-react";
 
 const Header = ({
   homeRef,
@@ -21,6 +22,8 @@ const Header = ({
   const [projectHover, setProjectHover] = useState(false);
   const [techHover, setTechHover] = useState(false);
   const [connectHover, setConnectHover] = useState(false);
+
+  const [mobMenu, setMobMenu] = useState(false);
 
   const homeinView = useInView(homeRef, {});
   const projectinView = useInView(projectRef, {
@@ -51,13 +54,56 @@ const Header = ({
     }
   }, [homeinView, aboutinView, projectinView, techinView, connectinView]);
   // console.log("pageActive: ", pageActive);
+
+  const mobMenuVariants = {
+    closed: {
+      transition: {
+        staggerChildren: 0.09,
+        staggerDirection: -1,
+      },
+    },
+    open: {
+      transition: {
+        staggerChildren: 0.09,
+        delayChildren: 0.25,
+        staggerDirection: 1,
+      },
+    },
+  };
+  const mobMenuItems = {
+    closed: {
+      y: 100,
+      transition: {
+        duration: 0.3,
+        ease: [0.37, 0, 0.63, 1],
+      },
+    },
+    open: {
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: [0, 0.55, 0.45, 1],
+      },
+    },
+  };
   return (
-    <motion.div
-      className="2xl:h-12 md:h-10 text-center font-FixelText text-[2vh]  px-[2vw] rounded-xl fixed left-1/2 top-[5vh] [transform:translate(-50%,-50%)]  z-[500] "
-      style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }}
-    >
-      <AnimatePresence>
-        <div className=" relative w-full h-full ">
+    <>
+      <motion.div
+        className="2xl:h-12 md:h-10 text-center font-FixelText text-[2vh]  px-[2vw] rounded-xl fixed left-1/2 top-[5vh] [transform:translate(-50%,-50%)]  z-[500] "
+        style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }}
+        initial={{
+          top: "-10vh",
+        }}
+        animate={{
+          top: "5vh",
+          transition: {
+            duration: 1.5,
+            delay: 1.5,
+            ease: [0.22, 0.7, 0, 1],
+          },
+        }}
+      >
+        <div className=" relative lg:w-full lg:opacity-100 h-full w-0 opacity-0 ">
           <div className="w-full h-full flex items-center justify-center">
             <button
               className="ml-4 relative "
@@ -340,8 +386,114 @@ const Header = ({
             </button>
           </div>
         </div>
+      </motion.div>
+      <div
+        onClick={() => {
+          setMobMenu(!mobMenu);
+        }}
+        className=" lg:scale-0 fixed top-0 right-0 z-[1001] p-4 text-white"
+      >
+        {mobMenu ? <X /> : <MenuIcon />}
+      </div>
+      <AnimatePresence>
+        {mobMenu && (
+          <motion.div
+            className=" w-full h-screen flex flex-col justify-center items-center font-FixelText bg-[#0e0d0d]  fixed top-0 z-[1000] origin-top"
+            initial={{
+              scaleY: 0,
+              transition: {
+                duration: 0.5,
+                ease: [0.22, 0.7, 0.2, 1],
+              },
+            }}
+            animate={{
+              scaleY: 1,
+              transition: {
+                duration: 0.5,
+                ease: [0.22, 0.7, 0.2, 1],
+              },
+            }}
+            exit={{
+              scaleY: 0,
+              transition: {
+                duration: 0.5,
+                ease: [0.22, 0.7, 0.2, 1],
+                delay: 0.5,
+              },
+            }}
+          >
+            {" "}
+            <motion.div
+              variants={mobMenuVariants}
+              initial="closed"
+              animate="open"
+              exit="closed"
+            >
+              <div
+                className=" text-[5vh] overflow-hidden text-center"
+                onClick={() => {
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                  });
+                  setMobMenu(false);
+                }}
+              >
+                <motion.div variants={mobMenuItems}>Home</motion.div>
+              </div>
+              <div
+                className=" text-[5vh] overflow-hidden text-center"
+                onClick={() => {
+                  window.scrollTo({
+                    top: projectRef.current.offsetTop,
+                    behavior: "smooth",
+                  });
+                  setMobMenu(false);
+                }}
+              >
+                <motion.div variants={mobMenuItems}>Projects</motion.div>
+              </div>
+              <div
+                className=" text-[5vh] overflow-hidden text-center"
+                onClick={() => {
+                  window.scrollTo({
+                    top: aboutRef.current.offsetTop,
+                    behavior: "smooth",
+                  });
+                  setMobMenu(false);
+                }}
+              >
+                <motion.div variants={mobMenuItems}>About Me</motion.div>
+              </div>
+              <div
+                className=" text-[5vh] overflow-hidden text-center"
+                onClick={() => {
+                  window.scrollTo({
+                    top: techRef.current.offsetTop,
+                    behavior: "smooth",
+                  });
+                  setMobMenu(false);
+                }}
+              >
+                <motion.div variants={mobMenuItems}>TechStacks</motion.div>
+              </div>
+              <div
+                className=" text-[5vh] overflow-hidden text-center"
+                onClick={() => {
+                  window.scrollTo({
+                    top: connectRef.current.offsetTop,
+                    behavior: "smooth",
+                  });
+                  setMobMenu(false);
+                }}
+              >
+                <motion.div variants={mobMenuItems}>Contacts</motion.div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
       </AnimatePresence>
-    </motion.div>
+    </>
   );
 };
 

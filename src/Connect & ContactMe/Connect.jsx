@@ -22,8 +22,8 @@ const Connect = () => {
   });
   return (
     <div className=" w-full h-[100vh] flex flex-col select-none" ref={ref}>
-      <div className="  h-[45%] mt-auto pt-[3vh] flex flex-col items-center justify-center">
-        <div className=" text-[5vh] leading-none overflow-hidden font-FixelText font-bold opacity-80 relative">
+      <div className="  lg:h-[45%] h-[30%] mt-auto pt-[3vh] flex flex-col items-center justify-center">
+        <div className=" lg:text-[5vh] text-[3vh] leading-none overflow-hidden font-FixelText font-bold opacity-80 relative">
           <motion.div
             className=" sticky"
             animate={{
@@ -39,7 +39,7 @@ const Connect = () => {
             CONNECT WITH ME
           </motion.div>
         </div>
-        <div className=" text-[20vh] font-semibold font-FixelText overflow-hidden leading-none relative">
+        <div className=" lg:text-[20vh] text-[6vh] whitespace-nowrap font-semibold font-FixelText overflow-hidden leading-none relative">
           <motion.div
             className=" sticky"
             animate={{
@@ -56,10 +56,10 @@ const Connect = () => {
           </motion.div>
         </div>
       </div>
-      <div className="  h-[45%] pb-[10vh] flex">
+      <div className="  h-[45%] pb-[10vh] flex lg:text-[10vh] text-[4.5vh]">
         <div className=" w-1/2  flex flex-col px-[2vw]">
           <motion.div
-            className=" h-1/2 flex items-center text-[10vh] ml-[2vw] overflow-hidden  relative"
+            className=" h-1/2 flex items-center lg:text-[10vh] text-[4.5vh] ml-[2vw] overflow-hidden  relative"
             onHoverStart={() => setlinkedinHover(true)}
             onHoverEnd={() => setlinkedinHover(false)}
           >
@@ -85,13 +85,13 @@ const Connect = () => {
                 className=" flex items-center pl-[2vw] w-full h-full  z-10"
               >
                 Linkedin
-                <ArrowUpRight className=" text-[50vh]" size={60} />
+                <ArrowUpRight className=" text-[50vh]" size={30} />
               </Link>
             </motion.div>
           </motion.div>
 
           <motion.div
-            className=" h-1/2 flex items-center text-[10vh] ml-[2vw] overflow-hidden  relative"
+            className=" h-1/2 flex items-center  ml-[2vw] overflow-hidden  relative"
             onHoverStart={() => setgithubHover(true)}
             onHoverEnd={() => setgithubHover(false)}
           >
@@ -117,14 +117,14 @@ const Connect = () => {
                 className=" flex items-center pl-[2vw] w-full h-full  z-10"
               >
                 Github
-                <ArrowUpRight className=" text-[50vh]" size={60} />
+                <ArrowUpRight className=" text-[20vh]" size={30} />
               </Link>
             </motion.div>
           </motion.div>
         </div>
         <div className=" w-1/2  flex flex-col px-[2vw]">
           <motion.div
-            className=" h-1/2 flex items-center text-[10vh] ml-[2vw] overflow-hidden  relative"
+            className=" h-1/2 flex items-center  ml-[2vw] overflow-hidden  relative"
             onHoverStart={() => settwitterHover(true)}
             onHoverEnd={() => settwitterHover(false)}
           >
@@ -150,12 +150,12 @@ const Connect = () => {
                 className=" flex items-center pl-[2vw] w-full h-full  z-10"
               >
                 Twitter
-                <ArrowUpRight className=" text-[50vh]" size={60} />
+                <ArrowUpRight className=" text-[50vh]" size={30} />
               </Link>
             </motion.div>
           </motion.div>
           <motion.div
-            className=" h-1/2 flex items-center text-[10vh] ml-[2vw] overflow-hidden  relative"
+            className=" h-1/2 flex items-center  ml-[2vw] overflow-hidden  relative"
             onHoverStart={() => setEmptyHover(true)}
             onHoverEnd={() => setEmptyHover(false)}
           >
@@ -181,7 +181,7 @@ const Connect = () => {
                 className=" flex items-center pl-[2vw] w-full h-full  z-10"
               >
                 Email
-                <ArrowUpRight className=" text-[50vh]" size={60} />
+                <ArrowUpRight className=" text-[50vh]" size={30} />
               </Link>
             </motion.div>
           </motion.div>

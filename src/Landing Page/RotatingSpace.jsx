@@ -12,9 +12,9 @@ const RotatingSpace = ({ mHover }) => {
   ));
   return (
     <>
-      <div className=" h-[100vh] w-[calc(100vw-3px)] absolute ">
+      <div className=" h-[100vh] lg:w-[calc(100vw-3px)] absolute ">
         <motion.main
-          className=" h-screen relative left-[55%]  grid place-items-center  opacity-65"
+          className=" h-screen relative lg:left-[57%] left-[10%]  grid place-items-center  opacity-65"
           style={{
             maskImage:
               "linear-gradient(to top right, transparent 2%, black 100%)",
@@ -66,9 +66,9 @@ const RotatingSpace = ({ mHover }) => {
           </motion.section>
         </motion.main>
       </div>
-      <div className=" h-[100vh] w-[calc(100vw-3px)] absolute ">
+      <div className=" h-[100vh] lg:w-[calc(100vw-3px)] absolute ">
         <motion.main
-          className=" h-screen relative right-[57%]  grid place-items-center  opacity-65"
+          className=" h-screen relative lg:right-[57%] right-[70%]  grid place-items-center  opacity-65"
           style={{
             maskImage:
               "linear-gradient(to top right, transparent 2%, black 100%)",

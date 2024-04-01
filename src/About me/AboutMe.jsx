@@ -25,7 +25,7 @@ const AboutMe = forwardRef(({}, ref) => {
       <div className=" w-full h-full absolute flex flex-col select-none overflow-hidden">
         <div className=" flex-1 relative ">
           <motion.div
-            className=" absolute h-fit left-1/2 top-1/2 w-1/3 font-Geist flex-wrap flex text-[3vh] leading-none flex-col text-center [transform:translate(-50%,-50%)]"
+            className=" absolute h-fit left-1/2 top-1/2 lg:w-1/3 w-[95%] font-Geist flex-wrap flex text-[3vh] leading-none flex-col text-center [transform:translate(-50%,-50%)]"
             ref={abtTextRef}
             animate={{
               opacity: abtTextInV ? 1 : 0,
@@ -55,9 +55,9 @@ const AboutMe = forwardRef(({}, ref) => {
           <div className=" flex flex-col w-full h-full">
             <div className=" h-3/5"></div>
             <div className=" h-2/5 flex" ref={bottomRef}>
-              <div className=" w-3/5 flex flex-col font-FixelText justify-center pl-[2vw] overflow-hidden  ">
+              <div className=" lg:w-3/5 w-full  flex flex-col font-FixelText justify-center pl-[2vw] overflow-hidden  ">
                 <motion.div
-                  className=" relative text-[5vh] flex items-center gap-[1vw] overflow-hidden "
+                  className=" relative lg:text-[5vh] text-[3vh] flex items-center lg:gap-[1vw]  gap-[2vw] overflow-hidden "
                   onMouseEnter={() => sethover1(true)}
                   onMouseLeave={() => sethover1(false)}
                   style={{
@@ -77,7 +77,7 @@ const AboutMe = forwardRef(({}, ref) => {
                   <motion.img
                     src={vector1}
                     alt="vector1"
-                    className=" w-[4vh]"
+                    className=" lg:w-[4vh] w-[2.5vh]"
                     animate={{ rotate: hover1 ? 360 : 0 }}
                   />
                   <motion.span
@@ -92,7 +92,7 @@ const AboutMe = forwardRef(({}, ref) => {
                       damping: 20,
                       ease: [0.42, 0, 0.58, 1],
                     }}
-                    className=" relative  text-[#ffffffaf]"
+                    className=" relative  text-[#ffffffaf] h-full"
                   >
                     Living In India.
                   </motion.span>
@@ -114,7 +114,7 @@ const AboutMe = forwardRef(({}, ref) => {
                   </motion.span>
                 </motion.div>
                 <motion.div
-                  className=" relative text-[5vh] flex items-center gap-[1vw] overflow-hidden "
+                  className=" relative lg:text-[5vh] text-[3vh] whitespace-nowrap flex items-center gap-[1vw] overflow-hidden "
                   onMouseEnter={() => sethover2(true)}
                   onMouseLeave={() => sethover2(false)}
                   style={{
@@ -134,7 +134,7 @@ const AboutMe = forwardRef(({}, ref) => {
                   <motion.img
                     src={vector2}
                     alt="vector2"
-                    className=" w-[4vh]"
+                    className=" lg:w-[4vh] w-[2.5vh]"
                     animate={{ rotate: hover2 ? 360 : 0 }}
                   />
                   <motion.span
@@ -151,7 +151,7 @@ const AboutMe = forwardRef(({}, ref) => {
                     }}
                     className=" relative  text-[#ffffffaf]"
                   >
-                    Currently Studying CS Engineering.
+                    Studying CS Engineering.
                   </motion.span>
                   <motion.span
                     animate={{
@@ -171,7 +171,7 @@ const AboutMe = forwardRef(({}, ref) => {
                   </motion.span>
                 </motion.div>
                 <motion.div
-                  className=" relative text-[5vh] flex items-center gap-[1vw] overflow-hidden "
+                  className=" relative lg:text-[5vh] text-[3vh] whitespace-nowrap flex items-center gap-[1vw] overflow-hidden "
                   onMouseEnter={() => sethover3(true)}
                   onMouseLeave={() => sethover3(false)}
                   style={{
@@ -191,7 +191,7 @@ const AboutMe = forwardRef(({}, ref) => {
                   <motion.img
                     src={vector3}
                     alt="vector3"
-                    className=" w-[4vh]"
+                    className=" lg:w-[4vh] w-[2.5vh]"
                     animate={{ rotate: hover3 ? 360 : 0 }}
                   />
 
@@ -228,40 +228,40 @@ const AboutMe = forwardRef(({}, ref) => {
                     Learning Web Dev & ML.
                   </motion.span>
                 </motion.div>
-              </div>
-              <div className=" w-2/5 flex items-center justify-center">
-                <motion.div
-                  className=" text-[4vh] font-FixelText cursor-pointer relative overflow-hidden"
-                  onMouseEnter={() => setresHover(true)}
-                  onMouseLeave={() => setresHover(false)}
-                >
-                  <motion.span
-                    className="flex items-center px-3 gap-[.2vw] relative z-10"
-                    animate={{
-                      x: resHover ? 12 : 0,
-                      y: bottomInV ? 0 : 200,
-                    }}
-                    transition={{
-                      duration: 0.5,
-                      type: "tween",
-                      ease: [0.42, 0, 0.58, 1],
-                      y: { delay: 0.5 },
-                    }}
-                  >
-                    My Resume <ArrowUpRight size="2.5rem" />
-                  </motion.span>
+                <div className="  flex items-center justify-center absolute lg:bottom-[10%] bottom-[2vh] right-0">
                   <motion.div
-                    className=" bg-[#effffc] absolute w-full h-[.3rem] bottom-0"
-                    animate={{
-                      transform: resHover ? "scaleX(1)" : "scaleX(0) ",
-                      transformOrigin: resHover ? "left" : ["left", "right"],
-                    }}
-                    transition={{
-                      duration: 0.5,
-                      ease: [0.42, 0, 0.58, 1],
-                    }}
-                  ></motion.div>
-                </motion.div>
+                    className=" text-[4vh] font-FixelText cursor-pointer relative overflow-hidden"
+                    onMouseEnter={() => setresHover(true)}
+                    onMouseLeave={() => setresHover(false)}
+                  >
+                    <motion.span
+                      className="flex items-center px-3 gap-[.2vw] relative z-10"
+                      animate={{
+                        x: resHover ? 12 : 0,
+                        y: bottomInV ? 0 : 200,
+                      }}
+                      transition={{
+                        duration: 0.5,
+                        type: "tween",
+                        ease: [0.42, 0, 0.58, 1],
+                        y: { delay: 0.5 },
+                      }}
+                    >
+                      My Resume <ArrowUpRight size="2.5rem" />
+                    </motion.span>
+                    <motion.div
+                      className=" bg-[#effffc] absolute w-full h-[.3rem] bottom-0"
+                      animate={{
+                        transform: resHover ? "scaleX(1)" : "scaleX(0) ",
+                        transformOrigin: resHover ? "left" : ["left", "right"],
+                      }}
+                      transition={{
+                        duration: 0.5,
+                        ease: [0.42, 0, 0.58, 1],
+                      }}
+                    ></motion.div>
+                  </motion.div>
+                </div>
               </div>
             </div>
           </div>

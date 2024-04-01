@@ -4,7 +4,7 @@ import Header from "./Header/Header";
 
 const Layout = () => {
   return (
-    <div className=" relative w-[90vw]">
+    <div className=" relative ">
       <Outlet />
     </div>
   );

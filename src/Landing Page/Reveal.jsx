@@ -8,7 +8,7 @@ const Reveal = () => {
 
   return (
     <motion.div
-      className=" h-[100vh] w-[100vw] bg-[#141414] fixed flex items-center justify-center overflow-x-hidden z-[500] select-none "
+      className=" h-[100vh] lg:w-[100vw]   bg-[#141414] fixed flex items-center justify-center overflow-x-hidden z-[500] select-none "
       initial={{ backgroundColor: "#141414", opacity: 1, scale: 1 }}
       animate={{
         backgroundColor: "#111010",
