@@ -5,14 +5,14 @@ import { motion, useInView } from "framer-motion";
 import noise from "/noise.svg";
 import RotatingSpace from "./RotatingSpace";
 import { Box } from "lucide-react";
-import useMousePos from "../util/useMousePos";
+// import useMousePos from "../util/useMousePos";
 
 const Homepage = forwardRef(({ xval, xval2, xval3, scaleV }, ref) => {
   const delay1 = 2.1;
   const delay2 = 2.4;
-  const [mHover, setmHover] = useState(false);
+  // const [mHover, setmHover] = useState(false);
   // console.log(mHover);
-  const { x, y } = useMousePos();
+  // const { x, y } = useMousePos();
   // console.log(x, y);
   return (
     <div ref={ref}>
@@ -23,7 +23,7 @@ const Homepage = forwardRef(({ xval, xval2, xval3, scaleV }, ref) => {
         }}
         className="sticky top-0 select-none overflow-hidden "
       >
-        <motion.div
+        {/* <motion.div
           className=" absolute h-11  border-[#ffffff] z-[501] aspect-square rounded-full border-2"
           style={{
             top: y - 4.5,
@@ -44,7 +44,7 @@ const Homepage = forwardRef(({ xval, xval2, xval3, scaleV }, ref) => {
           }}
         >
           {" "}
-        </motion.div>
+        </motion.div> */}
         <img
           className=" w-[100vw] brightness-[40%] z-40 h-full absolute object-cover opacity-20 "
           src={noise}
@@ -55,7 +55,7 @@ const Homepage = forwardRef(({ xval, xval2, xval3, scaleV }, ref) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, delay: delay1 }}
         >
-          <RotatingSpace mHover={mHover} />
+          {/* <RotatingSpace mHover={mHover} /> */}
         </motion.div>
 
         <motion.div className="  absolute top-0 blur-3xl opacity-75  overflow-hidden w-[calc(100vw-3px)] ">
