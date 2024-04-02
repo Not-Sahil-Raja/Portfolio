@@ -167,6 +167,7 @@ const LandingPage = () => {
 
             <section ref={projectRef} className=" h-[400vh] relative">
               {/* <Projects /> */}
+
               {ProjectData.map((data, index) => (
                 <StackProject index={index} key={index} data={data} />
               ))}

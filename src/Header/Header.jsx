@@ -398,7 +398,11 @@ const Header = ({
       <AnimatePresence>
         {mobMenu && (
           <motion.div
-            className=" w-full h-screen flex flex-col justify-center items-center font-FixelText bg-[#0e0d0d]  fixed top-0 z-[1000] origin-top"
+            className=" w-full h-screen flex flex-col justify-center items-center font-Geist   fixed top-0 z-[1000] origin-top"
+            style={{
+              background:
+                "linear-gradient(360deg, #718779 -50%, rgba(17,19,19,1) 34%, rgba(6,6,6,1) 150%)",
+            }}
             initial={{
               scaleY: 0,
               transition: {
@@ -430,7 +434,7 @@ const Header = ({
               exit="closed"
             >
               <div
-                className=" text-[5vh] overflow-hidden text-center"
+                className=" text-[4.5vh] overflow-hidden text-center"
                 onClick={() => {
                   window.scrollTo({
                     top: 0,
@@ -442,7 +446,7 @@ const Header = ({
                 <motion.div variants={mobMenuItems}>Home</motion.div>
               </div>
               <div
-                className=" text-[5vh] overflow-hidden text-center"
+                className=" text-[4.5vh] overflow-hidden text-center"
                 onClick={() => {
                   window.scrollTo({
                     top: projectRef.current.offsetTop,
@@ -454,7 +458,7 @@ const Header = ({
                 <motion.div variants={mobMenuItems}>Projects</motion.div>
               </div>
               <div
-                className=" text-[5vh] overflow-hidden text-center"
+                className=" text-[4.5vh] overflow-hidden text-center"
                 onClick={() => {
                   window.scrollTo({
                     top: aboutRef.current.offsetTop,
@@ -466,7 +470,7 @@ const Header = ({
                 <motion.div variants={mobMenuItems}>About Me</motion.div>
               </div>
               <div
-                className=" text-[5vh] overflow-hidden text-center"
+                className=" text-[4.5vh] overflow-hidden text-center"
                 onClick={() => {
                   window.scrollTo({
                     top: techRef.current.offsetTop,
@@ -478,7 +482,7 @@ const Header = ({
                 <motion.div variants={mobMenuItems}>TechStacks</motion.div>
               </div>
               <div
-                className=" text-[5vh] overflow-hidden text-center"
+                className=" text-[4.5vh] overflow-hidden text-center"
                 onClick={() => {
                   window.scrollTo({
                     top: connectRef.current.offsetTop,

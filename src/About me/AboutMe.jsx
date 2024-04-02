@@ -30,9 +30,6 @@ const AboutMe = forwardRef(({}, ref) => {
             ref={abtTextRef}
             animate={{
               opacity: abtTextInV ? 1 : 0,
-              transform: abtTextInV
-                ? "translate(-50%,-50%) rotateX(0)"
-                : "translate(-50%,-0%) rotateX(40deg)",
             }}
             transition={{
               duration: 0.5,

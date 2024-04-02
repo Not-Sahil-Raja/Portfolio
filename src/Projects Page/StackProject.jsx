@@ -26,6 +26,11 @@ const StackProject = ({ index, data }) => {
         background: index === 0 ? "#111010" : "transparent",
       }}
     >
+      {index == 0 && (
+        <div className=" text-[4.5vh] font-Geist opacity-85 absolute top-[10vh] z-[250]">
+          - Projects -
+        </div>
+      )}
       <div
         className={` lg:w-[65%] w-[80%] flex relative  justify-center max-md:flex-col rounded-md p-1 lg:p-4`}
         style={{
@@ -33,7 +38,7 @@ const StackProject = ({ index, data }) => {
         }}
       >
         <motion.div
-          className=" bg-[#0000003a]  absolute border backdrop-blur-md cursor-pointer z-40 lg:bottom-[7%] left-[3%] top-[24%]  rounded-full p-[1vh] "
+          className=" bg-[#0000003a]  absolute border backdrop-blur-md cursor-pointer z-40 lg:bottom-[7%] left-[3%] max-lg:top-[24%]  rounded-full p-[1vh] "
           onClick={videoHandle}
         >
           {vidPlaying ? <Pause size={25} /> : <Play size={25} />}
