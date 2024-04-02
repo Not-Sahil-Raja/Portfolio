@@ -61,14 +61,14 @@ const LandingPage = () => {
       link: "https://cypher-theta.vercel.app/",
       details:
         " Our payment fraud application employs machine learning algorithms to detect suspicious transactions, flagging potential fraudulent activity in real-time. ",
-      color: "#1f2a47",
+      color: "#3b2535",
     },
     {
       projectName: "Agrico",
       video: "./AgricoPromo.mp4",
       details:
         "Agrico is an innovative EdTech platform empowering individuals and communities to learn modern farming practices and cultivate sustainable agricultural success. ",
-      color: "#2d232e",
+      color: "#474725",
       link: "https://agrico.vercel.app/",
     },
     {
@@ -76,7 +76,7 @@ const LandingPage = () => {
       video: "./Cook'sBookPromo.mp4",
       details:
         " Cook's Book could evolve into a meal planning tool,suggesting recipes for the entire week that utilize overlapping ingredients and minimize waste.",
-      color: "#02010a",
+      color: "#3f3c3a",
       link: "https://github.com/AvirupRay/CookBook",
     },
     {
@@ -84,7 +84,7 @@ const LandingPage = () => {
       video: "./RobinFoodPromo.mp4",
       details:
         "RobinFood is a web platform that bridges the gap between restaurants withsurplus food and non-governmental organization(NGOs),food banks, dedicated to distributing food to those in need.",
-      color: "#2d2d34",
+      color: "#7d9470",
       link: "https://github.com/AvirupRay/reckon_5.0",
     },
   ];
