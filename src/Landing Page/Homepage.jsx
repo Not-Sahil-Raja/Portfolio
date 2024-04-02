@@ -198,9 +198,9 @@ const Homepage = forwardRef(({ xval, xval2, xval3, scaleV }, ref) => {
           </motion.div>
         </motion.div>
         <motion.div
-          className="   top-1/2 left-1/2 absolute cursor-none [transform:translate(-50%,-70%)] flex flex-col justify-center z-[500] "
-          onMouseEnter={() => setmHover(true)}
-          onMouseLeave={() => setmHover(false)}
+          className="   top-1/2 left-1/2 absolute  [transform:translate(-50%,-70%)] flex flex-col justify-center z-[500] "
+          // onMouseEnter={() => setmHover(true)}
+          // onMouseLeave={() => setmHover(false)}
         >
           <motion.div
             className=" h-fit  font-SpaceGrotesk  text-[15vw]  whitespace-nowrap  leading-none  flex flex-col items-center px-[.5vw] "

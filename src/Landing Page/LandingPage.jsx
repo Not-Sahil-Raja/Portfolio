@@ -17,6 +17,7 @@ import TechStacks from "../TechStack/TechStacks";
 import Connect from "../Connect & ContactMe/Connect";
 import ThankYou from "../Connect & ContactMe/ThankYou";
 import noise from "/noise.svg";
+import StackProject from "../Projects Page/StackProject";
 
 const LandingPage = () => {
   const [isLoading, setisLoading] = useState(true);
@@ -53,12 +54,47 @@ const LandingPage = () => {
   //   console.log("value: ", latest);
   // });
 
+  const ProjectData = [
+    {
+      projectName: "Cypher",
+      video: "./CypherPromo.mp4",
+      link: "https://cypher-theta.vercel.app/",
+      details:
+        " Our payment fraud application employs machine learning algorithms to detect suspicious transactions, flagging potential fraudulent activity in real-time. ",
+      color: "#1f2a47",
+    },
+    {
+      projectName: "Agrico",
+      video: "./AgricoPromo.mp4",
+      details:
+        "Agrico is an innovative EdTech platform empowering individuals and communities to learn modern farming practices and cultivate sustainable agricultural success. ",
+      color: "#2d232e",
+      link: "https://agrico.vercel.app/",
+    },
+    {
+      projectName: "Cook's Book",
+      video: "./Cook'sBookPromo.mp4",
+      details:
+        " Cook's Book could evolve into a meal planning tool,suggesting recipes for the entire week that utilize overlapping ingredients and minimize waste.",
+      color: "#02010a",
+      link: "https://github.com/AvirupRay/CookBook",
+    },
+    {
+      projectName: "RobinFood",
+      video: "./RobinFoodPromo.mp4",
+      details:
+        "RobinFood is a web platform that bridges the gap between restaurants withsurplus food and non-governmental organization(NGOs),food banks, dedicated to distributing food to those in need.",
+      color: "#2d2d34",
+      link: "https://github.com/AvirupRay/reckon_5.0",
+    },
+  ];
+
   useEffect(() => {
     setTimeout(() => {
       setisLoading(false);
     }, 1600);
   }, []);
-  console.log("Rendered");
+  // console.log("Rendered");
   return (
     <>
       <motion.div className={` relative  select-none  ${isLoading ? "" : ""}`}>
@@ -130,7 +166,10 @@ const LandingPage = () => {
             </section>
 
             <section ref={projectRef} className=" h-[400vh] relative">
-              <Projects />
+              {/* <Projects /> */}
+              {ProjectData.map((data, index) => (
+                <StackProject index={index} key={index} data={data} />
+              ))}
             </section>
           </motion.section>
 
