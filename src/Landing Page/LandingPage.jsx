@@ -200,7 +200,7 @@ const LandingPage = () => {
                     delay: 0.5,
                   }}
                 >
-                  TechSatcks
+                  TechStacks
                 </motion.span>
               </div>
               <TechStacks sm5={sm5} />
